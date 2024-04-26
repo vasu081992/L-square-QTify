@@ -1,0 +1,36 @@
+
+
+
+
+.search{
+    height:48px;
+    width:500px;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    position: absolute;
+    top:13px;
+    left:436px;
+    font-weight: 400;
+    font-size:16px;
+    line-height: 19.2px;
+    font-family: 'Lato', sans-serif; /* Use the 'Lato' font family */
+    padding-left: 10px;
+    border:1px solid black;
+}
+
+.button {
+    height:50px;
+    width:30px;
+    position:absolute;
+    top:13px;
+    left:949px;
+    background-color: white;
+    cursor: pointer;
+    margin-left: 0px;
+    border:1px solid black;
+    padding-left:2px;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    padding-right: 10px;
+    padding-left: 10px;
+}

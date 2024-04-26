@@ -1,0 +1,9 @@
+.nav {
+    background-color: #34c94B;
+    width:100vw;
+    height:74px;
+    display:flex;
+    justify-content:space-between;
+    position:relative;
+    align-items: center;
+}
