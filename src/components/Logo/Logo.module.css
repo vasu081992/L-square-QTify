@@ -1,7 +1,8 @@
 .logo{
 
     width:67px;
-   
+    position:absolute;
+    left:25px;
 }
 
 /* position:absolute;
