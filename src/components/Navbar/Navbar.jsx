@@ -8,6 +8,7 @@ import Button from "../Button/Button";
 
 const Navbar = () =>{
 
+    const text="Give feedback"
 return(
 
     <div className={styles.nav}>
@@ -16,7 +17,7 @@ return(
 
     <Search/>
   
-    <Button/>
+    <Button text={text}/>
     
     </div>
        
