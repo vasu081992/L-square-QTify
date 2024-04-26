@@ -7,11 +7,11 @@ const Logo = () =>{
 
 return(
 
-<div>
+<>
 
 <img src={image1} alt="qtify logo" className={styles.logo} />
 
-</div>
+</>
 
 
 )
