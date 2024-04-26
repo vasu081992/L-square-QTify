@@ -16,7 +16,7 @@ return(
 
     <Search/>
   
-    <Button text="Give feedback"/>
+    <Button text="Give Feedback"/>
     
     </div>
        
