@@ -15,9 +15,9 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
+          Learn React through qtify - yes qtify !
         </a>
-        <h1> Code check... .. ...</h1>
+        <h1> Code check</h1>
       </header>
     </div>
   );
