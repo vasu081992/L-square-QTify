@@ -1,0 +1,33 @@
+.title{
+    text-align: left;
+    margin-left: 20px;
+    color:white;
+    margin-top: 0px;
+    padding: 0;
+    margin-bottom: 20px;
+    font-family: "Poppins";
+}
+
+.section {
+    background-color: black;
+    height:592px;
+    width:100%vw;
+
+}
+
+.button{
+    background-color: black;
+    border: none;
+    color:#34C94B;
+    font-family: "Poppins";
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 30px;
+    cursor: pointer;
+}
+
+.top{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}

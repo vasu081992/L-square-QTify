@@ -1,4 +1,32 @@
 .card{
-    height:100px;
-    width:100px;
+    height:232px;
+    width:159px;
+    position: relative;
+    margin-top: 10px;
+    margin-left: 10px;
+    border-radius: 10px; /* top-left, top-right, bottom-right, bottom-left */
+    padding: 0;
+}
+
+.image{
+height:170px;
+width:100%;
+
+}
+
+.chip{
+    position:absolute;
+    left:8px;
+    top:176px;
+   
+}
+
+.albumname{
+    font-family: "Poppins";
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    width:130px;
+    height:21px;
+    padding:0px
 }
