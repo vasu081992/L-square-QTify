@@ -1,0 +1,38 @@
+.bgimage{
+    background-color: black;
+    width:100%vw;
+    height:270px;
+}
+
+.headphone{
+    height:212px;
+    width:212px;
+    position: absolute;
+    top:103px;
+    left:914px;
+}
+
+.text{
+    color:white;
+    font-family:"Poppins";
+    font-weight:600;
+    font-size: 32px;
+    line-height: 48px;
+    width: 473px;
+    height: 48px;
+    position: absolute;
+    top:125px;
+    left:368px;
+}
+.text2{
+    color:white;
+    font-family:"Poppins";
+    font-weight:600;
+    font-size: 32px;
+    line-height: 48px;
+    width: 600px;
+    height: 48px;
+    position: absolute;
+    top:170px;
+    left:300px;
+}
