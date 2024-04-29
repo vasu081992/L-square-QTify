@@ -11,6 +11,8 @@ const Section =()=>{
 
     const [albums,setalbums] = useState([])
 
+    const [newalbums,setNewalbums] = useState([])
+
     console.log("albums",albums)
 
 
@@ -23,10 +25,15 @@ useEffect(()=>{
     const response = await axios.get('https://qtify-backend-labs.crio.do/albums/top')
  
      const data =  response.data
-       
-      console.log("data",data)
+
+     const response1 = await axios.get('https://qtify-backend-labs.crio.do/albums/new')
+ 
+     const data1 =  response1.data
+    
 
       setalbums(data)
+      setNewalbums(data1)
+
         }
         catch(e){
             console.log("Error in fetching",e)
@@ -54,6 +61,22 @@ albums.map((album)=>(
 
 }
 </Grid>
+
+<div className={styles.top}> 
+    <p className={styles.title}> New Albums </p>
+    <button className={styles.button}> Collapse All</button>
+    </div>
+
+<Grid container spacing={2}>
+{newalbums.length>0 &&
+
+newalbums.map((album1)=>(
+<Card1 key ={album1.id} image={album1.image} label={album1.follows}Follows name={album1.title}/>
+))
+
+}
+</Grid>
+
  </div>
     )
 }

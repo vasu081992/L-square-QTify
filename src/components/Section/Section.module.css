@@ -10,7 +10,7 @@
 
 .section {
     background-color: black;
-    height:592px;
+    height:1200px;
     width:100%vw;
 
 }
@@ -31,3 +31,4 @@
     justify-content: space-between;
     margin-bottom: 10px;
 }
+
