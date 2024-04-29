@@ -4,6 +4,7 @@ import {useEffect,useState} from "react"
 import Card1 from "../Card/Card"
 import Grid from '@mui/material/Grid';
 import styles from "./Section.module.css"
+import Carousel from "../Carousel/Carousel";
 
 
 
@@ -12,6 +13,12 @@ const Section =()=>{
     const [albums,setalbums] = useState([])
 
     const [newalbums,setNewalbums] = useState([])
+
+    const [collapse,setcollapse] = useState(false)
+
+    const [newcollapse,setnewcollapse] = useState(false)
+
+    const [swiper,setswiper] = useState(false)
 
     console.log("albums",albums)
 
@@ -45,15 +52,27 @@ useEffect(()=>{
 
 },[])
 
+function Collapse(){
+setcollapse(!collapse)
+setswiper(!swiper)
+}
+
+function Collapse1(){
+    setnewcollapse(!newcollapse)
+    }
 
 return (
     <div className={styles.section}>
         <div className={styles.top}> 
     <p className={styles.title}> Top Albums </p>
-    <button className={styles.button}> Collapse All</button>
+    {collapse?
+    <button className={styles.button} onClick={Collapse}> Show All</button>
+     :
+    <button className={styles.button} onClick={Collapse}> Collapse All</button>
+}
     </div>
  <Grid container spacing={2}>
-{albums.length>0 &&
+{albums.length>0 && !swiper &&
 
 albums.map((album)=>(
 <Card1 key ={album.id} image={album.image} label={album.follows}Follows name={album.title}/>
@@ -61,10 +80,22 @@ albums.map((album)=>(
 
 }
 </Grid>
+{
+    swiper && (
+        <Carousel albums={albums}/>
+    )
+}
+
+
+<div className={styles.horizontalline} />
 
 <div className={styles.top}> 
     <p className={styles.title}> New Albums </p>
-    <button className={styles.button}> Collapse All</button>
+    {newcollapse?
+    <button className={styles.button} onClick={Collapse1}> Show All</button>
+     :
+    <button className={styles.button} onClick={Collapse1}> Collapse All</button>
+}
     </div>
 
 <Grid container spacing={2}>

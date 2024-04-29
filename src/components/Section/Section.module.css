@@ -12,6 +12,8 @@
     background-color: black;
     height:1200px;
     width:100%vw;
+    padding: 20px;
+
 
 }
 
@@ -32,3 +34,11 @@
     margin-bottom: 10px;
 }
 
+.horizontalline {
+        width: 100%vw;
+        height: 1px;
+        margin-top: 20px; /* Adjust as needed */
+        margin-bottom: 20px; /* Adjust as needed */
+        background-color:#34C94B
+      }
+      

@@ -1,0 +1,20 @@
+.text{
+    color:white
+}
+
+.margin{
+    margin-right:10px;
+}
+
+.imagepos{
+    position: absolute;
+    top:500px;
+    z-index:1;
+}
+
+.imagepos2{
+    position: absolute;
+    top:500px;
+    z-index:1; 
+    left:1300px
+}

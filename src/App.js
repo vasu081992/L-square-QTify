@@ -5,6 +5,8 @@ import Hero from './components/Hero/Hero';
 import React from "react"
 import Card1 from './components/Card/Card';
 import Section from './components/Section/Section';
+// Import the register function from Swiper
+
 
 const App = () => {
   return (
