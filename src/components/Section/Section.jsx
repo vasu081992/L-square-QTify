@@ -70,9 +70,9 @@ return (
         <div className={styles.top}> 
     <p className={styles.title}> Top Albums </p>
     {collapse?
-    <button className={styles.button} onClick={Collapse}> Show All</button>
+    <button className={styles.button} onClick={Collapse}> Show all</button>
      :
-    <button className={styles.button} onClick={Collapse}> Collapse All</button>
+    <button className={styles.button} onClick={Collapse}>collapse</button>
 }
     </div>
  <Grid container spacing={2}>
@@ -94,9 +94,9 @@ albums.map((album)=>(
 <div className={styles.top}> 
     <p className={styles.title}> New Albums </p>
     {newcollapse?
-    <button className={styles.button} onClick={Collapse1}> Show All</button>
+    <button className={styles.button} onClick={Collapse1}> Show all</button>
      :
-    <button className={styles.button} onClick={Collapse1}> Collapse All</button>
+    <button className={styles.button} onClick={Collapse1}>Collapse</button>
 }
     </div>
 
