@@ -31,7 +31,7 @@ const Carousel =({albums,newalbums})=>{
         slidesToScroll:1,
         // nextArrow: <CarouselLeftNavigation />,
         // prevArrow: <CarouselRightNavigation />,
-        arrows:false,
+        arrows:true,
         responsive: [
             {
               breakpoint: 1024,
@@ -59,36 +59,37 @@ const Carousel =({albums,newalbums})=>{
             }
           ]
         }      
-        const handleLeftButtonClick = () => {
-            sliderRef.current.slickPrev();
-            console.log("button clicked");
+        // const handleLeftButtonClick = () => {
+        //     sliderRef.current.slickPrev();
+        //     console.log("button clicked");
      
-        };
+        // };
 
-        const handleRightButtonClick = () => {
-            sliderRef.current.slickNext();
-            console.log("button clicked");
+        // const handleRightButtonClick = () => {
+        //     sliderRef.current.slickNext();
+        //     console.log("button clicked");
      
-        };
+        // };
 
-        const handleLeftButtonClick1 = () => {
-            sliderRef1.current.slickPrev();
-            console.log("button clicked");
+        // const handleLeftButtonClick1 = () => {
+        //     sliderRef1.current.slickPrev();
+        //     console.log("button clicked");
      
-        };
+        // };
 
-        const handleRightButtonClick1 = () => {
-            sliderRef1.current.slickNext();
-            console.log("button clicked");
+        // const handleRightButtonClick1 = () => {
+        //     sliderRef1.current.slickNext();
+        //     console.log("button clicked");
      
-        };
+        // };
 
 
 return (
 <div className={styles.margin}  >
 
    {albums.length>0 && (
-    <>   <CarouselLeftNavigation onClick={handleLeftButtonClick} />
+    <>   
+    {/* <CarouselLeftNavigation onClick={handleLeftButtonClick} /> */}
    <Slider {...settings} ref={sliderRef}> 
    {albums.map((album)=>(
     <div>
@@ -96,12 +97,13 @@ return (
     </div>
     ))}
     </Slider>
-<CarouselRightNavigation onClick={handleRightButtonClick} />
+{/* <CarouselRightNavigation onClick={handleRightButtonClick} /> */}
 </>
    )
 }
 {newalbums.length>0 && (
-        <>   <CarouselLeftNavigation1 onClick={handleLeftButtonClick1} />
+        <>   
+        {/* <CarouselLeftNavigation1 onClick={handleLeftButtonClick1} /> */}
         <Slider {...settings} ref={sliderRef1}> 
 {newalbums.map((album1)=>(
     <div>
@@ -109,7 +111,7 @@ return (
     </div>
     ))}
    </Slider>
-<CarouselRightNavigation1 onClick={handleRightButtonClick1} />
+{/* <CarouselRightNavigation1 onClick={handleRightButtonClick1} /> */}
 </>
    )
 }

@@ -22,7 +22,9 @@ const Section =()=>{
 
     const [swipernew,setswipernew] = useState(true)
 
+    const [songs,setsongs] = useState(false)
 
+   console.log("songs data",songs)
     console.log("albums",albums)
 
 
@@ -40,9 +42,14 @@ useEffect(()=>{
  
      const data1 =  response1.data
     
-
+     const response2 = await axios.get('https://qtify-backend-labs.crio.do/songs')
+ 
+     const data2 =  response2.data
+    
+   
       setalbums(data)
       setNewalbums(data1)
+      setsongs(data2)
 
         }
         catch(e){
