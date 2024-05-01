@@ -20,6 +20,9 @@ const Section =()=>{
 
     const [swiper,setswiper] = useState(false)
 
+    const [swipernew,setswipernew] = useState(false)
+
+
     console.log("albums",albums)
 
 
@@ -59,6 +62,7 @@ setswiper(!swiper)
 
 function Collapse1(){
     setnewcollapse(!newcollapse)
+    setswipernew(!swipernew)
     }
 
 return (
@@ -75,18 +79,16 @@ return (
 {albums.length>0 && !swiper &&
 
 albums.map((album)=>(
-<Card1 key ={album.id} image={album.image} label={album.follows}Follows name={album.title}/>
+<Card1 key ={album.id} image={album.image} label={`${album.follows} Follows`} name={album.title}/>
 ))
 
 }
 </Grid>
 {
     swiper && (
-        <Carousel albums={albums}/>
+        <Carousel albums={albums} newalbums=""/>
     )
 }
-
-
 <div className={styles.horizontalline} />
 
 <div className={styles.top}> 
@@ -99,7 +101,7 @@ albums.map((album)=>(
     </div>
 
 <Grid container spacing={2}>
-{newalbums.length>0 &&
+{newalbums.length>0 && !swipernew &&
 
 newalbums.map((album1)=>(
 <Card1 key ={album1.id} image={album1.image} label={album1.follows}Follows name={album1.title}/>
@@ -107,6 +109,12 @@ newalbums.map((album1)=>(
 
 }
 </Grid>
+
+{
+    swipernew && (
+        <Carousel newalbums={newalbums} albums=""/>
+    )
+}
 
  </div>
     )

@@ -18,3 +18,19 @@ function CarouselRightNavigation({onClick}) {
 }
 
 export default CarouselRightNavigation
+
+
+function CarouselRightNavigation1({onClick}) {
+
+
+    return (
+        <div className={styles.imagepos211} >
+      <img src={RightArrow} alt="Right Arrow" onClick={onClick}  />
+        </div>
+      );
+
+
+
+}
+
+export  {CarouselRightNavigation1}

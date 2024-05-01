@@ -12,9 +12,22 @@
     z-index:1;
 }
 
+.imagepos11{
+    position: absolute;
+    top:800px;
+    z-index:1;
+}
+
 .imagepos2{
     position: absolute;
     top:500px;
     z-index:1; 
-    left:1300px
+    left:1200px
+}
+
+.imagepos211{
+    position: absolute;
+    top:800px;
+    z-index:1; 
+    left:1200px
 }

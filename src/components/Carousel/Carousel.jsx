@@ -8,11 +8,14 @@ import "slick-carousel/slick/slick-theme.css";
 import CarouselLeftNavigation from "./LeftArrow";
 import CarouselRightNavigation from "./RightArrow";
 import {useRef ,useEffect} from "react"
+import {CarouselLeftNavigation1} from "./LeftArrow";
+import {CarouselRightNavigation1} from "./RightArrow";
 
 
-const Carousel =({albums})=>{
+const Carousel =({albums,newalbums})=>{
 
     const sliderRef=useRef(null)
+    const sliderRef1=useRef(null)
 
     useEffect(()=>{
         console.log("sliderref",sliderRef.current)
@@ -68,26 +71,49 @@ const Carousel =({albums})=>{
      
         };
 
+        const handleLeftButtonClick1 = () => {
+            sliderRef1.current.slickPrev();
+            console.log("button clicked");
+     
+        };
+
+        const handleRightButtonClick1 = () => {
+            sliderRef1.current.slickNext();
+            console.log("button clicked");
+     
+        };
+
 
 return (
+<div className={styles.margin}  >
 
-    <div className={styles.margin}  >
-
-
-<CarouselLeftNavigation onClick={handleLeftButtonClick} />
-    <Slider {...settings} ref={sliderRef}> 
-  
-    { albums.map((album)=>(
+   {albums.length>0 && (
+    <>   <CarouselLeftNavigation onClick={handleLeftButtonClick} />
+   <Slider {...settings} ref={sliderRef}> 
+   {albums.map((album)=>(
     <div>
       <Card1 key ={album.id} image={album.image} label={album.follows}Follows name={album.title}/>
     </div>
-    ))
-}
-
-</Slider>
+    ))}
+    </Slider>
 <CarouselRightNavigation onClick={handleRightButtonClick} />
-</div>
-    )
+</>
+   )
 }
-
+{newalbums.length>0 && (
+        <>   <CarouselLeftNavigation1 onClick={handleLeftButtonClick1} />
+        <Slider {...settings} ref={sliderRef1}> 
+{newalbums.map((album1)=>(
+    <div>
+      <Card1 key ={album1.id} image={album1.image} label={album1.follows}Follows name={album1.title}/>
+    </div>
+    ))}
+   </Slider>
+<CarouselRightNavigation1 onClick={handleRightButtonClick1} />
+</>
+   )
+}
+</div> 
+)
+}
 export default Carousel

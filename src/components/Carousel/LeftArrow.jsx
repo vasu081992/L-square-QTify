@@ -17,3 +17,19 @@ function CarouselLeftNavigation({onClick}) {
 }
 
 export default CarouselLeftNavigation
+
+
+function CarouselLeftNavigation1({onClick}) {
+
+
+    return (
+        <div className={styles.imagepos11} >
+      <img src={LeftArrow} alt="Left Arrow" onClick={onClick} />
+        </div>
+      );
+
+
+
+}
+
+export { CarouselLeftNavigation1 }
