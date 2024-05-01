@@ -93,7 +93,7 @@ albums.map((album)=>(
 </Grid>
 {
     swiper && (
-        <Carousel albums={albums} newalbums=""/>
+        <Carousel albums={albums} newalbums="" songs=""/>
     )
 }
 <div className={styles.horizontalline} />
@@ -119,10 +119,16 @@ newalbums.map((album1)=>(
 
 {
     swipernew && (
-        <Carousel newalbums={newalbums} albums=""/>
+        <Carousel newalbums={newalbums} albums="" songs=""/>
     )
 }
 
+{songs.length>0 &&
+
+<Carousel newalbums="" albums="" songs={songs}/>
+
+
+}
  </div>
     )
 }

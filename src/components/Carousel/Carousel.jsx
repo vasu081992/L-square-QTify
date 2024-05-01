@@ -5,14 +5,14 @@ import Card1 from "../Card/Card";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import CarouselLeftNavigation from "./LeftArrow";
-import CarouselRightNavigation from "./RightArrow";
+// import CarouselLeftNavigation from "./LeftArrow";
+// import CarouselRightNavigation from "./RightArrow";
 import {useRef ,useEffect} from "react"
-import {CarouselLeftNavigation1} from "./LeftArrow";
-import {CarouselRightNavigation1} from "./RightArrow";
+// import {CarouselLeftNavigation1} from "./LeftArrow";
+// import {CarouselRightNavigation1} from "./RightArrow";
 
 
-const Carousel =({albums,newalbums})=>{
+const Carousel =({albums,newalbums,songs})=>{
 
     const sliderRef=useRef(null)
     const sliderRef1=useRef(null)
@@ -115,6 +115,22 @@ return (
 </>
    )
 }
+
+{songs.length>0 && (
+        <>   
+{/* <CarouselLeftNavigation1 onClick={handleLeftButtonClick1} /> */}
+        <Slider {...settings} ref={sliderRef1}> 
+{songs.map((song)=>(
+    <div>
+      <Card1 key ={song.id} image={song.image} label={song.likes}Follows name={song.title}/>
+    </div>
+    ))}
+   </Slider>
+{/* <CarouselRightNavigation1 onClick={handleRightButtonClick1} /> */}
+</>
+   )
+}
+
 </div> 
 )
 }
