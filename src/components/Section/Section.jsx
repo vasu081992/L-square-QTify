@@ -72,7 +72,7 @@ return (
     {collapse?
     <button className={styles.button} onClick={Collapse}> Show all</button>
      :
-    <button className={styles.button} onClick={Collapse}>collapse</button>
+    <button className={styles.button} onClick={Collapse}>Collapse</button>
 }
     </div>
  <Grid container spacing={2}>
