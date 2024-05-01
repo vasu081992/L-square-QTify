@@ -18,9 +18,9 @@ const Section =()=>{
 
     const [newcollapse,setnewcollapse] = useState(false)
 
-    const [swiper,setswiper] = useState(false)
+    const [swiper,setswiper] = useState(true)
 
-    const [swipernew,setswipernew] = useState(false)
+    const [swipernew,setswipernew] = useState(true)
 
 
     console.log("albums",albums)
@@ -69,7 +69,7 @@ return (
     <div className={styles.section}>
         <div className={styles.top}> 
     <p className={styles.title}> Top Albums </p>
-    {collapse?
+    {!collapse?
     <button className={styles.button} onClick={Collapse}> Show all</button>
      :
     <button className={styles.button} onClick={Collapse}>Collapse</button>
@@ -93,8 +93,8 @@ albums.map((album)=>(
 
 <div className={styles.top}> 
     <p className={styles.title}> New Albums </p>
-    {newcollapse?
-    <button className={styles.button} onClick={Collapse1}> Show all</button>
+    {!newcollapse?
+    <button className={styles.button} onClick={Collapse1}>Show all</button>
      :
     <button className={styles.button} onClick={Collapse1}>Collapse</button>
 }
