@@ -1,7 +1,7 @@
 import React from "react"
 import {useState} from "react"
 import styles from "./Carousel.module.css"
-import Card1 from "../Card/Card";
+import Card from "../Card/Card";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -10,9 +10,10 @@ import "slick-carousel/slick/slick-theme.css";
 import {useRef ,useEffect} from "react"
 // import {CarouselLeftNavigation1} from "./LeftArrow";
 // import {CarouselRightNavigation1} from "./RightArrow";
+import BasicTabs from "../Tabs/Tabs";
 
 
-const Carousel =({albums,newalbums,songs})=>{
+const Carousel =({data,type})=>{
 
     const sliderRef=useRef(null)
     const sliderRef1=useRef(null)
@@ -21,7 +22,7 @@ const Carousel =({albums,newalbums,songs})=>{
         console.log("sliderref",sliderRef.current)
         })
 
- 
+ console.log("Carousel comp",data)
 
     const settings = {
         dots:false,
@@ -87,50 +88,19 @@ const Carousel =({albums,newalbums,songs})=>{
 return (
 <div className={styles.margin}  >
 
-   {albums.length>0 && (
+   {data.length>0 && (
     <>   
     {/* <CarouselLeftNavigation onClick={handleLeftButtonClick} /> */}
    <Slider {...settings} ref={sliderRef}> 
-   {albums.map((album)=>(
+   {data.map((album)=>(
     <div>
-      <Card1 key ={album.id} image={album.image} label={album.follows}Follows name={album.title}/>
+      <Card key ={album.id} data={album} type={type}/>
     </div>
     ))}
     </Slider>
-{/* <CarouselRightNavigation onClick={handleRightButtonClick} /> */}
 </>
    )
 }
-{newalbums.length>0 && (
-        <>   
-        {/* <CarouselLeftNavigation1 onClick={handleLeftButtonClick1} /> */}
-        <Slider {...settings} ref={sliderRef1}> 
-{newalbums.map((album1)=>(
-    <div>
-      <Card1 key ={album1.id} image={album1.image} label={album1.follows}Follows name={album1.title}/>
-    </div>
-    ))}
-   </Slider>
-{/* <CarouselRightNavigation1 onClick={handleRightButtonClick1} /> */}
-</>
-   )
-}
-
-{songs.length>0 && (
-        <>   
-{/* <CarouselLeftNavigation1 onClick={handleLeftButtonClick1} /> */}
-        <Slider {...settings} ref={sliderRef1}> 
-{songs.map((song)=>(
-    <div>
-      <Card1 key ={song.id} image={song.image} label={song.likes}Follows name={song.title}/>
-    </div>
-    ))}
-   </Slider>
-{/* <CarouselRightNavigation1 onClick={handleRightButtonClick1} /> */}
-</>
-   )
-}
-
 </div> 
 )
 }

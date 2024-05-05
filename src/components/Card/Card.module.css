@@ -1,12 +1,11 @@
-.card{
+/* .card{
     height:232px;
     width:159px;
     position: relative;
     margin-top: 10px;
     margin-left: 10px;
-    border-radius: 10px; /* top-left, top-right, bottom-right, bottom-left */
-    padding: 0;
-}
+    border-radius: 10px; /* top-left, top-right, bottom-right, bottom-left
+ } */
 
 .image{
 height:170px;
@@ -17,8 +16,9 @@ width:100%;
 .chip{
     position:absolute;
     left:8px;
-    top:176px;
-   
+    top:166px;
+   color:white;
+   background-color: black;
 }
 
 .albumname{
@@ -31,3 +31,59 @@ width:100%;
     padding:0px;
     color:white
 }
+
+
+.wrapper {
+    width: 160px;
+  }
+  
+  .card {
+    position: relative;
+    height: 205px;
+    width: 160px;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  .card > img {
+    width: 100%;
+    height: 90%;
+  }
+  
+  .banner {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 28px;
+    /* background-color: var(--color-white); */
+    background-color: white ;
+    display: flex;
+    align-items: center;
+    padding: 6px;
+  
+    .chip {
+      background-color: var(--color-white);
+      color: var(--color-black);
+    }
+  }
+  
+  .title > p {
+    margin-top: 6px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  .pill {
+    font-size: 12px;
+    background-color: var(--color-black);
+    width: max-content;
+    padding: 6px;
+    border-radius: 10px;
+    margin-top:0px;
+    color:white;  
+    background-color: black;
+  }
+
+
